@@ -97,15 +97,10 @@ static const SecAsn1Template kTpl[] =
     if (!self.data || self.data.length == 0) {
         return NO;
     }
-    //decoder
+
     SecAsn1CoderRef decoder = NULL;
-    
-    //status
     OSStatus status = -1;
-    
-    //payload struct
     ReceiptPayloadTotal payload = {0};
-    
     Attr_SET *attribute;
     
     status = SecAsn1CoderCreate(&decoder);
